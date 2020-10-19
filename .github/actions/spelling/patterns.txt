@@ -1,0 +1,17 @@
+# GitHub SHAs
+(?:\[[0-9a-f]+\]\(https:/|)/github\.com/[^/]+/[^/]+/[^/]+/[0-9a-f]+\b
+# SHA
+256:[0-9a-f]{64}
+\b[0-9a-f]{64}\b
+\b[0-9a-f]{40}\b
+#
+"token": "[a-zA-Z=;,/0-9+-]+"
+githubComToken\([a-zA-Z=;,/0-9+-]+\)
+"npmToken": "[^"]*"
+# URL escaped characters
+\%[0-9A-F]{2}
+v\d\b
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+# ignore long runs of a single character:
+\b([A-Za-z])\1{3,}\b
